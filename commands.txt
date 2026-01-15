@@ -1,0 +1,5 @@
+$ docker build -t gaddock/threat-api:v1.8 .
+$ docker push gaddock/threat-api:v1.8
+$ oc apply -f k8s/api-dep.yaml
+$ oc apply -f k8s/mongo-sfs.yaml
+$ oc expose svc/threat-api-svc
